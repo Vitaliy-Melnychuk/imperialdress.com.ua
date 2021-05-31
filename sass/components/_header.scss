@@ -1,0 +1,39 @@
+.header {
+    // background-color: $bg-gray-dark;
+    border-bottom: 1px solid $bg-gray-light;
+}
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.header__wrapper-shop {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__svg {
+    fill: $fill-gray;
+}
+.header__label {
+    font-family: 'Great Vibes', cursive;
+    color: $fill-gray;
+}
+.header__nav {
+    display: flex;
+}
+.header__wrapper-loupe {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__wrapper-menu {
+    margin-left: 20px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
