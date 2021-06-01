@@ -1,0 +1,22 @@
+.catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+}
+.catalog__item {
+    width: 100%;
+    margin: 5px;
+
+    @media screen and (min-width: 480px) {
+        width: calc( ( 100% - 2 * 10px) / 2 );
+    }
+}
+.catalog__wrapper-img {
+    @media screen and (min-width: 480px) {
+        height: 450px;
+    }
+}
+.catalog__img {
+    height: 100%;
+    object-fit: cover;
+}
