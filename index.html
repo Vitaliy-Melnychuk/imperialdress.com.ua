@@ -12,26 +12,56 @@
 <body>
     <header class="header">
         <div class="container">
-
-            <div class="header__wrapper-shop">
-                <svg class="header__svg" width="30">
-                    <use href="./images/sprite.svg#Capa_1"></use>
-                </svg>
+            <div class="header__mobile">
+                <a href="">
+                    <span class="header__wrapper-shop">
+                        <svg class="header__svg" width="30">
+                            <use href="./images/sprite.svg#Capa_1"></use>
+                        </svg>
+                    </span>
+                </a>
+    
+                <a href="index.html" class="header__label">
+                    <span class="header__wrapper-png">
+                        <img  class="header__png" src="./images/crown.png" alt="photo"/>
+                    </span>
+                    Imperial Dress
+                </a>
+    
+                <div class="header__nav" >
+                    <a href="" class="header__wrapper-loupe">
+                        <svg class="header__svg" width="20">
+                            <use href="./images/sprite.svg#loupe"></use>
+                        </svg>
+                    </a>
+                    <button class="header__wrapper-menu">
+                        <svg class="header__svg" width="20">
+                            <use href="./images/sprite.svg#icon-menu"></use>
+                        </svg>
+                    </button>
+                </div>
             </div>
-
-            <a href="index.html" class="header__label">Imperial Dress</a>
-
-            <div class="header__nav">
-                <div class="header__wrapper-loupe">
-                    <svg class="header__svg" width="20">
-                        <use href="./images/sprite.svg#loupe"></use>
-                    </svg>
-                </div>
-                <div class="header__wrapper-menu">
-                    <svg class="header__svg" width="20">
-                        <use href="./images/sprite.svg#icon-menu"></use>
-                    </svg>
-                </div>
+            <div class="wide-menu">
+                <ul class="wide-menu__list">
+                    <li class="wide-menu__item">
+                        <button class="wide-menu__btn active-element" data-id="wedding">Свадебные платья</button>
+                    </li>
+                    <li class="wide-menu__item">
+                        <button class="wide-menu__btn active-element" data-id="evening">Вечерние платья</button>
+                    </li>
+                    <li class="wide-menu__item">
+                        <button class="wide-menu__btn active-element" data-id="children">Детские платья</button>
+                    </li>
+                    <li class="wide-menu__item">
+                        <button class="wide-menu__btn active-element" data-id="accessories">Аксесуары</button>
+                    </li>
+                    <li class="wide-menu__item">
+                        <button class="wide-menu__btn active-element" data-id="about">О нас</button>
+                    </li>
+                    <li class="wide-menu__item">
+                        <button class="wide-menu__btn active-element" data-id="shares">Акции</button>
+                    </li>
+                </ul>
             </div>
 
         </div>
@@ -39,39 +69,69 @@
     <main>
         <section class="catalog">
             <div class="container">
-                <ul class="catalog__list">
-                    <li class="catalog__item">
-                        <div class="catalog__wrapper-img">
-                            <a class="catalog__link">
-                                <img  class="catalog__img" src="./images/d1.jpg" alt="photo"/>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="catalog__item">
-                        <div class="catalog__wrapper-img">
-                            <a class="catalog__link">
-                                <img  class="catalog__img" src="./images/d2.jpg" alt="photo"/>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="catalog__item">
-                        <div class="catalog__wrapper-img">
-                            <a class="catalog__link">
-                                <img  class="catalog__img" src="./images/d3.jpg" alt="photo"/>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="catalog__item">
-                        <div class="catalog__wrapper-img">
-                            <a class="catalog__link">
-                                <img  class="catalog__img" src="./images/d4.jpg" alt="photo"/>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
+                <!-- <div class="catalog__btn-wrapper catalog__btn-none">
+                    <button class="catalog__btn">
+                        <svg class="catalog__svg" width="12">
+                            <use href="./images/sprite.svg#back-arrow"></use>
+                        </svg>
+                        <span class="catalog__btn-content">назад</span>
+                    </button>
+                </div> -->
+                <ul class="catalog__list"></ul>
+                
+                <div class="backdrop-menu">
+                    <button class="backdrop-menu__wrapper">
+                        <svg class="backdrop-menu__svg" width="20">
+                            <use href="./images/sprite.svg#icon-close"></use>
+                        </svg>
+                    </button>
+                    <ul class="mobile-menu__list">
+                        <li class="mobile-menu__item">
+                            <button class="mobile-menu__btn active-element" data-id="wedding">Свадебные платья
+                                <svg class="mobile-menu__svg" width="20">
+                                    <use href="./images/sprite.svg#forward-arrow"></use>
+                                </svg>
+                            </button>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <button class="mobile-menu__btn active-element" data-id="evening">Вечерние платья
+                                <svg class="mobile-menu__svg" width="20">
+                                    <use href="./images/sprite.svg#forward-arrow"></use>
+                                </svg>
+                            </button>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <button class="mobile-menu__btn active-element" data-id="children">Детские платья
+                                <svg class="mobile-menu__svg" width="20">
+                                    <use href="./images/sprite.svg#forward-arrow"></use>
+                                </svg>
+                            </button>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <button class="mobile-menu__btn active-element" data-id="accessories">Аксесуары
+                                <svg class="mobile-menu__svg" width="20">
+                                    <use href="./images/sprite.svg#forward-arrow"></use>
+                                </svg>
+                            </button>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <button class="mobile-menu__btn active-element" data-id="about">О нас
+                                <svg class="mobile-menu__svg" width="20">
+                                    <use href="./images/sprite.svg#forward-arrow"></use>
+                                </svg>
+                            </button>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <button class="mobile-menu__btn active-element" data-id="shares">Акции
+                                <svg class="mobile-menu__svg" width="20">
+                                    <use href="./images/sprite.svg#forward-arrow"></use>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
-   
     </main>
     <footer class="footer">
         <div class="container">
@@ -79,7 +139,7 @@
                 <ul class="footer__list">
                     <li class="footer__item">
                         <div class="footer__icon-wrapper">
-                            <a href="" class="footer__link">
+                            <a href="https://www.instagram.com/?hl=ru/vitaly_melnichuk" class="footer__link">
                                 <svg class="footer__icon" width="20" height="20">
                                     <use href="./images/sprite.svg#icon-instagram"></use>
                                 </svg>
@@ -88,7 +148,7 @@
                     </li>
                     <li class="footer__item">
                         <div class="footer__icon-wrapper">
-                            <a href="" class="footer__link">
+                            <a href="https://www.facebook.com/" class="footer__link">
                                 <svg class="footer__icon" width="20" height="20">
                                     <use href="./images/sprite.svg#icon-facebook"></use>
                                 </svg>
@@ -99,14 +159,14 @@
                         <div class="footer__icon-wrapper">
                             <a href="" class="footer__link">
                                 <svg class="footer__icon" width="20" height="20">
-                                    <use href="./images/sprite.svg#icon-instagram"></use>
+                                    <use href="./images/sprite.svg#icon-vk"></use>
                                 </svg>
                             </a>
                         </div>
                     </li>
                     <li class="footer__item">
                         <div class="footer__icon-wrapper">
-                            <a href="" class="footer__link">
+                            <a href="mailto:info@devstudio.com" class="footer__link">
                                 <svg class="footer__icon" width="20" height="20">
                                     <use href="./images/sprite.svg#icon-email"></use>
                                 </svg>
@@ -117,8 +177,18 @@
             </div>
             <p class="footer__text">Anna Campbell 1143 High Street, Armadale, VIC, 3143, Australia +61 3 9822 1293 hello@annacampbell.com.au</p>
             <p class="footer__text">© 2017 | ABN 54 154 918 626 1143 HIGH STREET, ARMADALE, VICTORIA, AUSTRALIA</p>
-            <div></div>
+            <div class="message">
+                <button class="message__btn">
+                    <span class="message__wrapper-icon">
+                        <svg class="message__icon" width="20" height="12">
+                            <use href="./images/sprite.svg#icon-email"></use>
+                        </svg>
+                    </span>
+                    Message
+                </button>
+            </div>
         </div>
     </footer>
+    <script src="./script/main.js"></script>
 </body>
 </html>
