@@ -35,35 +35,6 @@
     }
 }
 
-.catalog__btn-wrapper {
-    left: 0;
-}
-.catalog__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $brand-white;
-    border: 0.3px solid $fill-gray;
-    border-radius: 20px;
-    font-family: 'Mate SC', serif;
-    padding: 5px;
-    margin-bottom: 15px;
-    height: 25px;
-}
-.catalog__svg {
-    fill: $fill-gray;
-    height: 20px;
-}
-.catalog__btn-content {
-    top: 0;
-    margin-left: 5px;
-    color: $fill-gray;
-    font-size: 18px;
-}
-.catalog__btn-wrapper.catalog__btn-none {
-    display: none;
-}
-
 .catalog__list {
     display: flex;
     flex-wrap: wrap;

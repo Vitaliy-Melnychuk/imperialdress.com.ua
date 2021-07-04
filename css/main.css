@@ -302,45 +302,6 @@ img {
   }
 }
 
-.catalog__btn-wrapper {
-  left: 0;
-}
-
-.catalog__btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #FFFFFF;
-  border: 0.3px solid #7A7A7A;
-  border-radius: 20px;
-  font-family: 'Mate SC', serif;
-  padding: 5px;
-  margin-bottom: 15px;
-  height: 25px;
-}
-
-.catalog__svg {
-  fill: #7A7A7A;
-  height: 20px;
-}
-
-.catalog__btn-content {
-  top: 0;
-  margin-left: 5px;
-  color: #7A7A7A;
-  font-size: 18px;
-}
-
-.catalog__btn-wrapper.catalog__btn-none {
-  display: none;
-}
-
 .catalog__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -483,5 +444,106 @@ img {
 .mobile-menu__svg {
   height: 15px;
   fill: #FFFFFF;
+}
+
+.search {
+  width: 100%;
+  text-align: center;
+  min-height: 500px;
+  padding-top: 50px;
+}
+
+.search__wrapper {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.search__input {
+  width: 100%;
+  padding: 10px 100px 10px 10px;
+  border-radius: 20px;
+  border: 2px solid #7A7A7A;
+  outline: none;
+}
+
+@media screen and (min-width: 480px) {
+  .search__input {
+    width: 380px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .search__input {
+    width: 550px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .search__input {
+    width: 800px;
+  }
+}
+
+.search__btn {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 0.1px solid #7A7A7A;
+  color: #7A7A7A;
+  background-color: #FFFFFF;
+}
+
+@media screen and (min-width: 480px) {
+  .search__btn {
+    right: 55px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .search__btn {
+    right: 50px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .search__btn {
+    right: 85px;
+  }
+}
+
+.search__result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -10px;
+}
+
+.full-description__item {
+  position: relative;
+  max-width: 100%;
+  margin: 10px;
+}
+
+@media screen and (min-width: 480px) {
+  .full-description__item {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .full-description__item {
+    max-width: calc( ( 100% - 2 * 20px) / 2);
+  }
+}
+
+.full-description__text {
+  text-align: left;
+  margin-top: 30px;
+  font-size: 20px;
+  color: #41474B;
 }
 /*# sourceMappingURL=main.css.map */
