@@ -1,4 +1,18 @@
 const categories = {
+    mainGallery: [
+        {name: 's2021_001', data: 'id="s2021_001"', description: '150$', descriptionStyle: 's2021_001', folder: 's2021'},
+        {name: 's2021_002', data: 'id="s2021_002"', description: '160$', descriptionStyle: 's2021_002', folder: 's2021'},
+        {name: 's2021_007', data: 'id="s2021_007"', description: '170$', descriptionStyle: 's2021_007', folder: 's2021'},
+        {name: 's2021_004', data: 'id="s2021_004"', description: '180$', descriptionStyle: 's2021_004', folder: 's2021'},
+        {name: 's2021_005', data: 'id="s2021_005"', description: '180$', descriptionStyle: 's2021_005', folder: 's2021'},
+        {name: 's2021_006', data: 'id="s2021_006"', description: '180$', descriptionStyle: 's2021_006', folder: 's2021'},
+        {name: 'v2021_001', data: 'id="v2021_001"', description: '150$', descriptionStyle: 'v2021_001', folder: 'v2021'},
+        {name: 'v2021_002', data: 'id="v2021_002"', description: '160$', descriptionStyle: 'v2021_002', folder: 'v2021'},
+        {name: 'v2021_007', data: 'id="v2021_007"', description: '170$', descriptionStyle: 'v2021_007', folder: 'v2021'},
+        {name: 'v2021_004', data: 'id="v2021_004"', description: '180$', descriptionStyle: 'v2021_004', folder: 'v2021'},
+        {name: 'v2021_005', data: 'id="v2021_005"', description: '180$', descriptionStyle: 'v2021_005', folder: 'v2021'},
+        {name: 'v2021_006', data: 'id="v2021_006"', description: '180$', descriptionStyle: 'v2021_006', folder: 'v2021'},
+    ],
     wedding: [
         {name: 's2021_001', data: 'id="s2021"', description: 'Колекция 2021<span class="catalog__description-letter">г</span>', descriptionStyle: 'Свадебные платья', folder: 's2021'},
         {name: 's2020_001', data: 'id="s2020"', description: 'Колекция 2020<span class="catalog__description-letter">г</span>', descriptionStyle: 'Свадебные платья', folder: 's2020'},
@@ -40,7 +54,7 @@ const categories = {
     v2021: [
         {name: 'v2021_001', data: 'id="v2021_001"', description: '150$', descriptionStyle: 'v2021_001', folder: 'v2021'},
         {name: 'v2021_002', data: 'id="v2021_002"', description: '160$', descriptionStyle: 'v2021_002', folder: 'v2021'},
-        {name: 'v2021_003', data: 'id="v2021_003"', description: '170$', descriptionStyle: 'v2021_003', folder: 'v2021'},
+        {name: 'v2021_007', data: 'id="v2021_007"', description: '170$', descriptionStyle: 'v2021_007', folder: 'v2021'},
         {name: 'v2021_004', data: 'id="v2021_004"', description: '180$', descriptionStyle: 'v2021_004', folder: 'v2021'},
         {name: 'v2021_005', data: 'id="v2021_005"', description: '180$', descriptionStyle: 'v2021_005', folder: 'v2021'},
         {name: 'v2021_006', data: 'id="v2021_006"', description: '180$', descriptionStyle: 'v2021_006', folder: 'v2021'},
@@ -105,6 +119,47 @@ function createDirectory (models) {
     catalogEl.innerHTML = liEl;
     checkActivityBackdropMenu();
 }
+function createMainGallery () {
+    const liEl = categories.mainGallery.map(objectGallery => {
+        return `
+            <li class="main-gallery__item">
+                <div class="main-gallery__wrapper-img">
+                    <a class="main-gallery__link">
+                        <img 
+                            class="main-gallery__img active-element" 
+                            src="./images/${objectGallery.folder}/${objectGallery.name}.jpg" 
+                            alt="photo"
+                            data-${objectGallery.data}
+                        />
+                    </a>
+                </div>
+            </li>
+        `;
+    }).join('');
+    catalogEl.innerHTML = liEl;
+    setMainGalleryEl();
+}
+let iq = 0;
+let ia = 0;
+function setMainGalleryEl () {
+    if ( iq >= 1) {ia = iq;}
+    iq++;
+    const mainGalleryEl = document.querySelectorAll('.main-gallery__item');
+    const arrayMainGalleryEl = [...mainGalleryEl];
+    const lengthEl = arrayMainGalleryEl.length;
+    checkLengthEl(ia, arrayMainGalleryEl, lengthEl);
+}
+function checkLengthEl (is, arrayCheckEl, lengthEl) {
+    if (is < lengthEl) {
+        arrayCheckEl.map(arrayEl => arrayEl.classList.remove('absolute-opacity'));
+        arrayCheckEl[is].classList.add('absolute-opacity');
+        setTimeout(setMainGalleryEl, 2000);
+    } else {
+        arrayCheckEl[is-1].classList.add('absolute-opacity');
+    }
+}
+
+createMainGallery();
 
 const burgerMenuEl = document.querySelector('.header__wrapper-menu');
 const closeMenuEl = document.querySelector('.backdrop-menu__wrapper');

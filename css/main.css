@@ -546,4 +546,46 @@ img {
   font-size: 20px;
   color: #41474B;
 }
+
+.main-gallery__item {
+  position: absolute;
+  opacity: 0;
+  max-width: 100%;
+  margin: 10px;
+}
+
+@media screen and (min-width: 640px) {
+  .main-gallery__item {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .main-gallery__item {
+    height: 500px;
+  }
+}
+
+.main-gallery__item.absolute-opacity {
+  position: relative;
+  opacity: 1;
+}
+
+@media screen and (min-width: 640px) {
+  .main-gallery__wrapper-img {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .main-gallery__wrapper-img {
+    height: 500px;
+  }
+}
+
+.main-gallery__img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 /*# sourceMappingURL=main.css.map */
