@@ -1,5 +1,6 @@
 .header {
-    border-bottom: 1px solid $bg-gray-light;
+    // border-bottom: 1px solid $bg-gray-light;
+    border-bottom: 1px solid $brand-gold;
 }
 .header__mobile {
     display: flex;
@@ -14,7 +15,8 @@
     align-items: center;
 }
 .header__svg {
-    fill: $fill-gray;
+    fill: $brand-gold;
+    // fill: $fill-gray;
 }
 .header__label {
     display: flex;
